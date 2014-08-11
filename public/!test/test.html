@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<link rel='stylesheet' href='styles.css'> </link>
+		<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+	</head>
+	<body>
+	
+		<div class="card" onclick="f1()">
+			<div id="front" class="front face"></div>
+			<div id="back" class="back face"></div>
+		</div>
+		<div class="card" onclick="f1()">
+			<div id="front" class="front face"></div>
+			<div id="back" class="back face"></div>
+		</div>
+		
+		<script>
+			// http://jsfiddle.net/JR2Lu/3/, modified
+			function f1(){
+				
+				function toggle(card){
+					var gotFlipped = false;
+					for (var i = 0, len = card.classList.length; i < len; i++) {
+						if (card.classList[i] == "flipped") {
+							gotFlipped = true;
+							break;
+						}
+					}
+					
+					if (gotFlipped) {
+						card.classList.remove("flipped");
+					} else {
+						card.classList.add("flipped");
+					}
+				}
+				
+				var cards = document.getElementsByClassName("card");
+				for (var i = 0; i < cards.length; i++) toggle(cards[i]);
+			}
+		</script>
+	</body>
+</html>

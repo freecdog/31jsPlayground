@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    color: lightgrey;
+    perspective: 1000;
+}
+html, body, .face {
+        background-color: #aaa;
+}
+html, body, .card, .face {
+    height: 330;
+    width: 510;
+}
+
+.face {
+    position: absolute;
+    backface-visibility: hidden;
+}
+.card {
+    transition: all .9s; 
+    transform-style: preserve-3d;
+}
+.front {
+    background-image: url(images/rome_3-t2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.back {
+    background-image: url(images/wave_13-t2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.back, .flipped {
+    transform: rotateY(-180deg);
+}

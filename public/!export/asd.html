@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<link rel='stylesheet' href='styles.css'> </link>
+	</head>
+	<body>
+	
+		<div class="flip-container" >
+			<div class="flipperX">
+				<div class="front i111"> <!-- front content --> </div>
+				<div class="backX i112"> <!-- back content --> </div>
+			</div>
+		</div>
+		<div class="flip-container" >
+			<div class="flipperX">
+				<div class="front i121"> <!-- front content --> </div>
+				<div class="backX i122"> <!-- back content --> </div>
+			</div>
+		</div>
+		
+		<div class='asd' onclick="flip()">flip</div>
+		<script>
+			// thank you man, http://davidwalsh.name/css-flip
+			function flip(){
+				//var el = document.getElementsByClassName('flip-container')[0];
+				var el = document.getElementsByClassName('flipperX');
+				//console.log(el);
+				//el.classList.toggle('hover');
+				
+				function toggle(elem, num){
+					//console.log(elem.style.webkitTransform, elem.style.MozTransform, elem.style.msTransform, elem.style.OTransform, elem.style.transform);
+					var act1;
+					if (num % 2 == 0) act1 = "rotateX(180deg)";
+					else act1 = "rotateX(-180deg)";
+					var act2 = "";
+				
+					if (elem.style.transform) {
+						elem.style.transform = act2;
+					} else {
+						elem.style.transform = act1;
+					}
+				}
+				
+				for (var i = 0; i < el.length; i++)
+					toggle(el[i], i);
+				
+			}
+		</script>
+	</body>
+</html>

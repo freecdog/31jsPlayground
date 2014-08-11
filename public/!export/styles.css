@@ -1,0 +1,91 @@
+/* entire container, keeps perspective */
+body {
+	background-color: #aaa;
+}
+
+.flip-container {
+    perspective: 1000;
+}
+
+/* flip the pane when hovered */
+/*.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}*/
+ 
+.flip-container, .front, .backX {
+	width: 640px;
+    height: 320px;
+}
+.backY {
+	width: 320px;
+    height: 640px;
+}
+ 
+/* flip speed goes here */
+.flipperX, .flipperY {
+    transition: 1.618s;
+    transform-style: preserve-3d;
+	
+    position: relative;
+}
+.flipperX {
+	transform-origin: 100% 160px; /* half of height */
+}
+ 
+/* hide back of pane during swap */
+.front, .back {
+    backface-visibility: hidden;
+ 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+ 
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+}
+ 
+/* back, initially hidden pane */
+.backX {
+    transform: rotateX(180deg);
+}
+.backY {
+    transform: rotateY(180deg);
+}
+
+.asd {
+	font-size: 48px;
+}
+
+.i111 {
+	background: url("images/111.jpg");
+}
+.i112 {
+	background: url("images/112.jpg");
+}
+.i121 {
+	background: url("images/121.jpg");
+}
+.i122 {
+	background: url("images/122.jpg");
+}
+
+.i211 {
+	background: url("images/211.jpg");
+}
+.i221 {
+	background: url("images/221.jpg");
+}
+.i311 {
+	background: url("images/311.jpg");
+}
+.i321 {
+	background: url("images/321.jpg");
+}
+.i411 {
+	background: url("images/411.jpg");
+}
+.i421 {
+	background: url("images/421.jpg");
+}
