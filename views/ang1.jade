@@ -1,0 +1,17 @@
+//-
+   Created by yarvyk on 12.08.2014.
+
+doctype html
+html(ng-app="jApp")
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        script(src="/javascripts/angular.js")
+        script(src="/javascripts/ang1.js")
+    body(ng-controller="jListCtrl")
+        div
+            input(ng-model="jQuery")
+        div
+            ul
+                li(ng-repeat="elem in jElements | filter:jQuery")
+                    | {{elem.name}}, {{elem.snippet}}

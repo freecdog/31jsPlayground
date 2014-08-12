@@ -1,15 +1,14 @@
 body {
     padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+body, input {
+    font: 44px "Lucida Grande", Helvetica, Arial, sans-serif;
     background-color: #444;
-
     color: #eee;
 }
-
 a {
     color: #00B7FF;
 }
-
 
 
 .node circle {

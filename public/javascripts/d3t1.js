@@ -3,7 +3,7 @@
  */
 
 
-window.onload = (function (d3){
+window.onload = function (){
     console.log("d3t1");
     var obj = d3.selectAll("p").data([1,3,5,7,9]).style("color", function() {
         return "hsl(" + Math.random() * 360 + ",100%,50%)";
@@ -23,4 +23,4 @@ window.onload = (function (d3){
 
     //d3.select("body").transition().duration(2000).delay(1000)
     //    .style("background-color", "yellow");
-})(d3);
+};

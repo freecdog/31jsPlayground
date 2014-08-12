@@ -2140,7 +2140,7 @@ var flare = {
     ]
 };
 
-window.onload = (function (d3, flare){
+window.onload = function (){
     console.log("d3t2", d3, flare);
     var width = 960, height = 4200;
     var cluster = d3.layout.cluster().size([height, width - 160]);
@@ -2179,5 +2179,5 @@ window.onload = (function (d3, flare){
     }
     d3.select(self.frameElement).style("height", height + "px");
 
-})(d3, flare);
+};
 
