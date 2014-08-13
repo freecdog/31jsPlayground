@@ -2,7 +2,7 @@
  * Created by yarvyk on 12.08.2014.
  */
 
-(function (){
+(function (angular){
 
     "use strict";
 
@@ -15,16 +15,16 @@
         $scope.jElements = [
             {
                 'name': '1) Qwe',
-                'snippet': 'qsc qsc'
+                'snippet': 'qsc qscr'
             },
             {
                 'name': '2) Asd',
-                'snippet': 'axe axe'
+                'snippet': 'axe axef'
             },
             {
                 'name': '3) Zxc',
-                'snippet': 'zwd zwd'
+                'snippet': 'zwd zwdv'
             }
         ];
     });
-})();
+})(angular);

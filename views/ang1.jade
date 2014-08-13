@@ -11,6 +11,10 @@ html(ng-app="jApp")
     body(ng-controller="jListCtrl")
         div
             input(ng-model="jQuery")
+            //-
+                input(ng-model="jQuery.$") // all
+                input(ng-model="jQuery.name")
+                input(ng-model="jQuery.snippet")
         div
             ul
                 li(ng-repeat="elem in jElements | filter:jQuery")
