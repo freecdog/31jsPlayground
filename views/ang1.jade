@@ -9,6 +9,9 @@ html(ng-app="jApp")
         script(src="/javascripts/angular.js")
         script(src="/javascripts/ang1.js")
     body(ng-controller="jListCtrl")
+
+        p Angular tutorial lessons 1-6.
+
         div
             input(ng-model="jQuery")
         div
@@ -23,6 +26,8 @@ html(ng-app="jApp")
             ul
                 li(ng-repeat="elem in jElements | filter:jQuery | orderBy:jOrderProp")
                     span {{elem.name}}
+                    a(ng-src='{{elem.id}}') {{elem.id}}
+                    img(ng-src='{{elem.image}}', style='-webkit-filter: invert(100%);')
                     span :
                     br
                     span {{elem.snippet}} ({{elem.date}})
