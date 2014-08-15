@@ -11,11 +11,18 @@ html(ng-app="jApp")
     body(ng-controller="jListCtrl")
         div
             input(ng-model="jQuery")
+        div
+            select(ng-model="jOrderProp")
+                option(value="name") By name
+                option(value="date") By date
             //-
                 input(ng-model="jQuery.$") // all
                 input(ng-model="jQuery.name")
                 input(ng-model="jQuery.snippet")
         div
             ul
-                li(ng-repeat="elem in jElements | filter:jQuery")
-                    | {{elem.name}}, {{elem.snippet}}
+                li(ng-repeat="elem in jElements | filter:jQuery | orderBy:jOrderProp")
+                    span {{elem.name}}
+                    span :
+                    br
+                    span {{elem.snippet}} ({{elem.date}})

@@ -12,19 +12,25 @@
     console.log(jApp);
 
     jApp.controller('jListCtrl', function($scope) {
+
         $scope.jElements = [
             {
-                'name': '1) Qwe',
-                'snippet': 'qsc qscr'
+                'name': 'Qwe',
+                'snippet': 'qsc qscr',
+                'date': (new Date()).getMilliseconds() + 10000
             },
             {
-                'name': '2) Asd',
-                'snippet': 'axe axef'
+                'name': 'Asd',
+                'snippet': 'axe axef',
+                'date': (new Date()).getMilliseconds() + 5000
             },
             {
-                'name': '3) Zxc',
-                'snippet': 'zwd zwdv'
+                'name': 'Zxc',
+                'snippet': 'zwd zwdv',
+                'date': (new Date()).getMilliseconds() + 2500
             }
         ];
+
+        $scope.jOrderProp = 'name';
     });
 })(angular);
