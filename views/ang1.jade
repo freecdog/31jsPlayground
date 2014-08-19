@@ -14,7 +14,7 @@ html(ng-app="jApp")
 
         div
             input(ng-model="jQuery")
-        div
+    div
             select(ng-model="jOrderProp")
                 option(value="name") By name
                 option(value="date") By date
@@ -24,7 +24,9 @@ html(ng-app="jApp")
                 input(ng-model="jQuery.snippet")
         div
             ul
-                li(ng-repeat="elem in jElements | filter:jQuery | orderBy:jOrderProp")
+                //- li(ng-repeat="elem in jElementsHttp | filter:jQuery | orderBy:jOrderProp")
+                //- li(ng-repeat="elem in jElementsHttp | filter:{name: jQuery, snippet: jQuery} | orderBy:jOrderProp")
+                li(ng-repeat="elem in jElements | filter: nameSnippetFilter | orderBy:jOrderProp")
                     span {{elem.name}}
                     a(ng-src='{{elem.id}}') {{elem.id}}
                     img(ng-src='{{elem.image}}', style='-webkit-filter: invert(100%);')
