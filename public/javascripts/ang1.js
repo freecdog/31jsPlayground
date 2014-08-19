@@ -42,7 +42,6 @@
         });
 
         $scope.nameSnippetFilter = function(elem){
-            console.warn(elem);
             if ($scope.jQuery == undefined) return true;
             var query = $scope.jQuery.trim();
             return elem.name.indexOf(query)!=-1 || elem.snippet.indexOf(query)!=-1;
