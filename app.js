@@ -12,6 +12,7 @@ var d3t1 = require('./routes/d3t1');
 var d3t2 = require('./routes/d3t2');
 
 var ang1 = require('./routes/ang1');
+var ang2 = require('./routes/ang2');
 
 var app = express();
 
@@ -33,6 +34,7 @@ app.use('/d3t1', d3t1);
 app.use('/d3t2', d3t2);
 
 app.use('/ang1', ang1);
+app.use('/ang2', ang2);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
