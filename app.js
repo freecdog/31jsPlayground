@@ -33,6 +33,9 @@ app.use('/users', users);
 app.use('/d3t1', d3t1);
 app.use('/d3t2', d3t2);
 
+app.use('/ang0', function(req,res){
+    res.render('ang0');
+});
 app.use('/ang1', ang1);
 app.use('/ang2', ang2);
 

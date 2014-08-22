@@ -1,0 +1,14 @@
+//
+   Created by yarvyk on 22.08.2014.
+
+html(ng-app="jApp")
+    head
+        title
+            | ang book tutorials
+        script(src="/javascripts/angular.js")
+        script(src="/javascripts/ang0.js")
+    body
+        div(ng-controller="jController")
+            input(ng-model="obj.text")
+            p
+                | {{obj.text}} you've just typed
