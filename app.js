@@ -48,6 +48,22 @@ app.use(function(req, res, next) {
 
 /// error handlers
 
+var request = require('request');
+var url = 'http://google.com' // input your url here
+var timeoutInMilliseconds = 10*1000; // timeout 10 sec
+var opts = {
+    url: url,
+    timeout: timeoutInMilliseconds
+};
+request(opts, function (err, res, body) {
+    if (err) {
+        console.dir(err);
+        return;
+    }
+    var statusCode = res.statusCode;
+    console.log(statusCode, body);
+});
+
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
