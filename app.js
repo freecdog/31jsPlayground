@@ -38,6 +38,9 @@ app.use('/ang0', function(req,res){
 });
 app.use('/ang1', ang1);
 app.use('/ang2', ang2);
+app.use('/ember', function(req,res){
+    res.render('ember');
+});
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -49,7 +52,7 @@ app.use(function(req, res, next) {
 /// error handlers
 
 var request = require('request');
-var url = 'http://google.com' // input your url here
+var url = 'http://google.com'; // input your url here
 var timeoutInMilliseconds = 10*1000; // timeout 10 sec
 var opts = {
     url: url,
@@ -61,7 +64,7 @@ request(opts, function (err, res, body) {
         return;
     }
     var statusCode = res.statusCode;
-    console.log(statusCode, body);
+    console.log('Requesting google', statusCode, body, '\ngot it!');
 });
 
 // development error handler
