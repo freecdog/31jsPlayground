@@ -30,7 +30,7 @@ Todos.TodosController = Ember.ArrayController.extend({
     inflection: function(value){
         var remaining = this.get('remaining');
         if (remaining == 0) return 'sovsem';
-        else if (remaining == 1) return 'ne mnogo';
+        else if (remaining == 1) return 'nemnogo';
         else return 'mnogo';
     }.property('remaining')
 });
